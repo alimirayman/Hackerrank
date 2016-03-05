@@ -10,19 +10,17 @@ import java.util.*;
 public class Angry_Professor {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
         int test = Integer.parseInt(sc.nextLine());
         for(int t = 0; t < test; t++){
             int students = Integer.parseInt(sc.next());
             int lim = Integer.parseInt(sc.next());
-            int onTime = 0;
+            int offTime = 0;
             for(int s = 0; s < students; s++){
-                if( Integer.parseInt(sc.next()) >= 0) onTime++;
+                if( Integer.parseInt(sc.next()) < 1) offTime++;
             }
-            if(onTime>=lim) System.out.println("NO");
-            else System.out.println("YES");
-                
+            if(offTime < lim) System.out.println("YES");
+            else System.out.println("NO");
         }
     }
 }
